@@ -1,0 +1,33 @@
+                                 
+                                 Postbase
+
+1- we can see that our text was encoded by base64 
+
+2- So  R[corrupted]BR3tCNDUzXzYxWDdZXzRSfQ==  --> as youcan see we are missing some letters after 'R' 
+
+ but easily we can now the number of those missing you can see if you count the letters without the corrupted section 
+
+  --> RBR3tCNDUzXzYxWDdZXzRSfQ==  --> they're 26 and with two '==' that means that there are missing two letters 
+
+   just to be 28 letters so we are missing two letters after 'R' 
+
+      *****Note that in base64 the ltters should be multible of four so when we have our encoded text isn't multiple of four 
+       we put at the end ot it any number 0f '=' to be multiblr pf four *********
+
+  3- Here is a python scriot to brute force the two letters
+
+     `````````````````````
+     import base64 
+encodedStr = 'BR3tCNDUzXzYxWDdZXzRSfQ==' 
+Map = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=' ;
+
+for i in range (64) : 
+      for j in range (64) :
+	       r= 'R' + Map[i] + Map[j] + encodedStr
+	       decoded = base64.b64decode(r) 
+	       if b'FLAG' in decoded :
+        	 print (decoded)
+    `````````````````````
+
+  4- After you run the script you can noe see the flag --> FLAG{B453_61X7Y_4R} 
+
